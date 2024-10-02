@@ -1,0 +1,120 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.source {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.publish-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.btn-primary:hover {
+    background-color: #ff4081;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+/* Added styles for animation */
+.news-card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card:hover img {
+    transform: scale(1.1);
+}
+
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #efe0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    transition: opacity 1s ease;
+}
+
+#splash img {
+    width: 100%;
+    height: auto;
+}
+
+#splash h1 {
+    color: black;
+    margin-top: 20px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+/* Fade out animation for splash screen */
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Main content should be hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Bounce animation for the logo */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo {
+    width: 30%;
+    height: auto;
+}
+
+.sidebar {
+  position: fixed; /* Or absolute */
+  top: 0;
+  left: 0;
+  width: 60%; /* Adjust as needed */
+  height: 100%;
+  background-color: #0866ff;
+  z-index: 1000; /* Ensure it's above other content */
+  overflow-y: auto; /* So the sidebar can scroll */
+  transition: transform 0.3s ease;
+}
+
+
